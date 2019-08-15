@@ -1,5 +1,5 @@
 {% set name = "swifter" %}
-{% set version = "0.290" %}
+{% set version = "0.292" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bab159ae4fb89737cddf2d8bd173da42c03a36521596f2a6ee81ead2b9b9b301
+  sha256: 428359b8947c79889d55f9f0a550b3535075258201548c9055a50b342796e622
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - psutil
     - python
     - tqdm >=4.27.0
+    - parso >0.4.0
 
 test:
   imports:
