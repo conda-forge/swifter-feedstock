@@ -1,5 +1,5 @@
 {% set name = "swifter" %}
-{% set version = "0.293" %}
+{% set version = "0.294" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 13d4ec507b1ec32724f02d62aca1240b67125c3e084e149bb14c926a6398df2c
+  sha256: 0968dba17f3763fff180a8895536031243a404f4359701f6ff07d8298f783dff
 
 build:
   number: 0
