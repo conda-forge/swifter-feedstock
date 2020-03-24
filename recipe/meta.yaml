@@ -21,12 +21,13 @@ requirements:
   run:
     - dask >=0.19.0
     - ipywidgets >=7.0.0
-    - numba
+    - numba >=0.30.0
     - pandas >=0.23.0
-    - psutil
+    - psutil >=5.6.6
     - python
     - tqdm >=4.33.0
     - parso >0.4.0
+    - bleach>=3.1.1
 
 test:
   imports:
