@@ -1,18 +1,18 @@
 {% set name = "swifter" %}
-{% set version = "0.301" %}
+{% set version = "0.302" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 89c3581d35beba86a1e2e348cf4f6d8ba251b117f347bd4fb8191e21760acac9
+  sha256: 4a35325891a321010ede811327eb4bf56918bc8e4cb0d051039140d62aefce31
 
 build:
   number: 0
-  skip: True  # [py27]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  skip: true  # [py27]
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -21,12 +21,13 @@ requirements:
   run:
     - dask >=0.19.0
     - ipywidgets >=7.0.0
-    - numba
+    - numba >=0.30.0
     - pandas >=0.23.0
-    - psutil
+    - psutil >=5.6.6
     - python
     - tqdm >=4.33.0
     - parso >0.4.0
+    - bleach >=3.1.1
 
 test:
   imports:
@@ -37,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A package which efficiently applies any function to a pandas dataframe or series in the fastest available manner."
+  summary: A package which efficiently applies any function to a pandas dataframe or series in the fastest available manner.
 
 extra:
   recipe-maintainers:
