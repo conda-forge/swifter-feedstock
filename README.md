@@ -5,7 +5,7 @@ Home: https://github.com/jmcarpenter2/swifter
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A package which efficiently applies any function to a pandas dataframe or series in the fastest available manner.
 
