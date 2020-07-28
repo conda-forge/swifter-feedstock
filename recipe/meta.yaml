@@ -28,8 +28,8 @@ requirements:
     - tqdm >=4.33.0
     - parso >0.4.0
     - bleach >=3.1.1
-    - modin>=0.7.4
-    - pickle5>=0.0.11
+    - modin >=0.7.4
+    - pickle5 >=0.0.11
 
 test:
   imports:
