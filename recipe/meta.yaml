@@ -1,5 +1,5 @@
 {% set name = "swifter" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0ff8d0c8438ebf44ded83af142823aeacdcbe230d3c0603f3d1068eeb0dfd488
+  sha256: 160ce20b23325ee19d01eb10c9a413f9a570f5e226df7936ed71f146e2c70094
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py27]
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -28,7 +28,7 @@ requirements:
     - tqdm >=4.33.0
     - parso >0.4.0
     - bleach >=3.1.1
-    - modin >=0.7.4
+    - modin >=0.8.1.1
     - cloudpickle >=0.2.2
 
 test:
