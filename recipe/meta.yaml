@@ -1,5 +1,5 @@
 {% set name = "swifter" %}
-{% set version = "1.0.9" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 14cec10ff1ecdfbcfdd68985366b07add5f9b7bb77116720f47c88f29f048c3e
+  sha256: b954f3adb894f6b158ae86f4a2bdd44d8d52b75032f997f20a3c8c0b0da58fe4
 
 build:
   number: 0
@@ -27,7 +27,6 @@ requirements:
     - tqdm >=4.33.0
     - parso >0.4.0
     - bleach >=3.1.1
-    - modin >=0.8.1.1
     - cloudpickle >=0.2.2
 
 test:
@@ -43,4 +42,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - jmcarpenter2
     - apcamargo
