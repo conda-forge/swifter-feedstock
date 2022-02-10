@@ -21,7 +21,7 @@ requirements:
   run:
     - bleach >=3.1.1
     - cloudpickle >=0.2.2
-    - dask-core >=2.10.0
+    - dask >=2.10.0
     - ipywidgets >=7.0.0
     - pandas >=1.0.0
     - parso >0.4.0
