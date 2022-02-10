@@ -1,46 +1,49 @@
 {% set name = "swifter" %}
-{% set version = "1.0.9" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 14cec10ff1ecdfbcfdd68985366b07add5f9b7bb77116720f47c88f29f048c3e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/swifter-{{ version }}.tar.gz
+  sha256: b954f3adb894f6b158ae86f4a2bdd44d8d52b75032f997f20a3c8c0b0da58fe4
 
 build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  skip: true  # [py27]
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
+    - bleach >=3.1.1
+    - cloudpickle >=0.2.2
     - dask >=2.10.0
     - ipywidgets >=7.0.0
     - pandas >=1.0.0
-    - psutil >=5.6.6
-    - python
-    - tqdm >=4.33.0
     - parso >0.4.0
-    - bleach >=3.1.1
-    - modin >=0.8.1.1
-    - cloudpickle >=0.2.2
+    - psutil >=5.6.6
+    - python >=3.6
+    - tqdm >=4.33.0
 
 test:
   imports:
     - swifter
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/jmcarpenter2/swifter
+  summary: A package which efficiently applies any function to a pandas dataframe or series in the fastest available manner
   license: MIT
-  license_family: MIT
   license_file: LICENSE
-  summary: A package which efficiently applies any function to a pandas dataframe or series in the fastest available manner.
 
 extra:
   recipe-maintainers:
+    - jmcarpenter2
     - apcamargo
