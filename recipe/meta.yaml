@@ -1,5 +1,5 @@
 {% set name = "swifter" %}
-{% set version = "1.1.3" %}
+{% set version = "1.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/swifter-{{ version }}.tar.gz
-  sha256: a26147ddfa7ff4ebb9dd7df31d77e4878329884c19130cccd7748a098b9c8dac
+  sha256: 120efa94d7bbc8ef5fc5d407db97f69fd39800ad3d93ab7e6ba64037b4fdfcc3
 
 build:
   noarch: python
