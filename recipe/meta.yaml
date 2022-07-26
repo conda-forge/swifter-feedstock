@@ -28,6 +28,8 @@ requirements:
     - psutil >=5.6.6
     - python >=3.6
     - tqdm >=4.33.0
+  run_constrained:
+    - ray >=1.0.0
 
 test:
   imports:
