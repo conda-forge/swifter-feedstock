@@ -1,11 +1,11 @@
-About swifter
-=============
+About swifter-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/swifter-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jmcarpenter2/swifter
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/swifter-feedstock/blob/main/LICENSE.txt)
 
 Summary: A package which efficiently applies any function to a pandas dataframe or series in the fastest available manner
 
