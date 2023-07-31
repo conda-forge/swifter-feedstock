@@ -19,17 +19,14 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - bleach >=3.1.1
-    - cloudpickle >=0.2.2
     - dask >=2.10.0
-    - ipywidgets >=7.0.0
     - pandas >=1.0.0
-    - parso >0.4.0
     - psutil >=5.6.6
     - python >=3.6
     - tqdm >=4.33.0
   run_constrained:
     - ray >=1.0.0
+    - ipywidgets >=7.0.0
 
 test:
   imports:
