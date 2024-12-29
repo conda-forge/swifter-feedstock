@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/swifter-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/swifter-{{ version }}.tar.gz
   sha256: e1bb74476a21b3f07a17aa18c97fdcba8599726bd17da732f09dabcc50e26ba0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - dask >=2.10.0
     - pandas >=1.0.0
     - psutil >=5.6.6
-    - python >=3.6
+    - python >={{ python_min }}
     - tqdm >=4.33.0
   run_constrained:
     - ray >=1.0.0
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jmcarpenter2/swifter
